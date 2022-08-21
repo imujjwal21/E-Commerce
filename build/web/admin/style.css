@@ -1,0 +1,19 @@
+h1{
+    color: green;
+}
+
+
+.primary-background{
+    background: #2196f3!important;
+}
+
+.navbar .nav-item .nav-link{
+    font-size: 20px;
+    color: white;
+}
+.navbar .nav-item:hover .nav-link{
+    background-color: white;
+    color:#0d47a1;
+    border-radius: 15px;
+    font-weight: 30px;
+}

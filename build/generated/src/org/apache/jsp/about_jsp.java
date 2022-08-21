@@ -1,0 +1,425 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import com.entity.User;
+
+public final class about_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(3);
+    _jspx_dependants.add("/all_component/allCss.jsp");
+    _jspx_dependants.add("/all_component/profilecss.css");
+    _jspx_dependants.add("/all_component/navbar.jsp");
+  }
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html lang=\"en\">\r\n");
+      out.write("<head>\r\n");
+      out.write("    <meta charset=\"UTF-8\">\r\n");
+      out.write("    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
+      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("    <title>Document</title>\r\n");
+      out.write("    \r\n");
+      out.write("    <link rel=\"stylesheet\" href=\"font/css/font-awesome.css\">\r\n");
+      out.write("\r\n");
+      out.write("     ");
+      out.write("        \n");
+      out.write("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n");
+      out.write("\n");
+      out.write("<!--<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> -->\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" integrity=\"sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n");
+      out.write("\n");
+      out.write("<link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\"/>  <!--  my css in css folder  -->\n");
+      out.write("\n");
+      out.write("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n");
+      out.write("\n");
+      out.write("<link rel=\"stylesheet\" href=\"all_component/style.css\">");
+      out.write("\r\n");
+      out.write("     ");
+      out.write("/*@import url('https://fonts.googleapis.com/css?family=Oswald');\n");
+      out.write(" @import url('https://fonts.googleapis.com/css?family=Merriweather');\n");
+      out.write(" @import url('https://fonts.googleapis.com/css?family=Bitter');\n");
+      out.write(" @import url('https://fonts.googleapis.com/css?family=Exo+2');*/\n");
+      out.write("\n");
+      out.write(".row {\n");
+      out.write("    height: 600px;\n");
+      out.write("    background-color: #2ecc71;\n");
+      out.write("    width: 700px;\n");
+      out.write("    margin-left: 200px;\n");
+      out.write("}\n");
+      out.write(".pic_base{\n");
+      out.write("    height: 30%;\n");
+      out.write("    background-color: #34495e;\n");
+      out.write("    background: url('img/pen-table-note.jpg');\n");
+      out.write("    background-size: cover;\n");
+      out.write("}\n");
+      out.write(".icon_base{\n");
+      out.write("    background-color: #d35400;\n");
+      out.write("    height: 50px;\n");
+      out.write("    width: 50px;\n");
+      out.write("    padding: 2px;\n");
+      out.write("    position: absolute;\n");
+      out.write("    margin-left: 630px;\n");
+      out.write("    margin-top: 150px;\n");
+      out.write("    align-items: center;\n");
+      out.write("    border-radius: 100%;\n");
+      out.write("}\n");
+      out.write("#edit{\n");
+      out.write("    color: white;\n");
+      out.write("    margin-left: 10px;\n");
+      out.write("    margin-top: 8px;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("#profile_pic{\n");
+      out.write("    border-radius: 100%;\n");
+      out.write("    border: 2px solid #34495e;\n");
+      out.write("    box-shadow: 0 2px 2px black;\n");
+      out.write("    box-sizing: border-box;\n");
+      out.write("    position: absolute;\n");
+      out.write("    margin-top: 40px;\n");
+      out.write("    margin-left: 20px;\n");
+      out.write("}\n");
+      out.write("#title {\n");
+      out.write("    position: absolute;\n");
+      out.write("    font-family: verdana;\n");
+      out.write("    margin-left: 360px;\n");
+      out.write("    margin-top: 10px;\n");
+      out.write("    color: #ecf0f1;\n");
+      out.write("    font-family: 'Merriweather', serif;\n");
+      out.write("}\n");
+      out.write("#profession{\n");
+      out.write("    position: absolute;\n");
+      out.write("    margin-left: 360px;\n");
+      out.write("    margin-top: 70px;\n");
+      out.write("    font-weight: bold;\n");
+      out.write("    font-family: 'Bitter', serif;\n");
+      out.write("}\n");
+      out.write("#content{\n");
+      out.write("    padding-top: 120px;\n");
+      out.write("    padding-left: 10px;\n");
+      out.write("    font-family: 'Exo 2', sans-serif;\n");
+      out.write("}\n");
+      out.write(".social{\n");
+      out.write("    list-style: none;\n");
+      out.write("    position: absolute;\n");
+      out.write("    bottom: 70px;\n");
+      out.write("    align-items: center;\n");
+      out.write("    margin-left: 30px;\n");
+      out.write("}\n");
+      out.write(".social li {\n");
+      out.write("    display: inline;\n");
+      out.write("    padding: 20px;\n");
+      out.write("    margin-left: -30px;\n");
+      out.write("    padding-left: 130px;\n");
+      out.write("    align-items: center;\n");
+      out.write("    color: white;\n");
+      out.write("}\n");
+      out.write(".social li a{\n");
+      out.write("    color: white;\n");
+      out.write("}\n");
+      out.write(".social li a:hover{\n");
+      out.write("    color: blue;\n");
+      out.write("    transform: scale(1,1.5);\n");
+      out.write("}");
+      out.write("\r\n");
+      out.write("    \r\n");
+      out.write("     <style>\r\n");
+      out.write("            body{\r\n");
+      out.write("                background-color: #f7f7f7;\r\n");
+      out.write("            }\r\n");
+      out.write("            .crd-ho:hover{\r\n");
+      out.write("                background-color: #ffe6e6;\r\n");
+      out.write("            }\r\n");
+      out.write("            .brand{\r\n");
+      out.write("                background: #2196f3!important;\r\n");
+      out.write("                color: white;\r\n");
+      out.write("                text-align: center;\r\n");
+      out.write("                font-size: 70px; \r\n");
+      out.write("                margin:0;\r\n");
+      out.write("                padding: 10px;\r\n");
+      out.write("            }\r\n");
+      out.write("            \r\n");
+      out.write("        </style>\r\n");
+      out.write("     \r\n");
+      out.write("     \r\n");
+      out.write("</head>\r\n");
+      out.write("<body>\r\n");
+      out.write("    \r\n");
+      out.write("    <h1 class=\"brand\" > <span class=\"fa fa-asterisk fa-spin\"></span> Shopy.com</h1>\r\n");
+      out.write("        ");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("  \n");
+      out.write("  <nav class=\"navbar navbar-expand-lg navbar-dark \" style=\"background-color: #2196f3\" >      <!-- bg-dark ke jagah primary-background -->\n");
+      out.write("    \n");
+      out.write("<!--    <a class=\"navbar-brand\" href=\"index.jsp\"> <span class=\"fa fa-asterisk\"></span> Shopy.com</a>-->\n");
+      out.write("  \n");
+      out.write("<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
+      out.write("    <span class=\"navbar-toggler-icon\"></span>\n");
+      out.write("  </button>\n");
+      out.write("    \n");
+      out.write("  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n");
+      out.write("    <ul class=\"navbar-nav mr-auto\">\n");
+      out.write("        \n");
+      out.write("      ");
+
+          User user = (User) session.getAttribute("currentUser");
+          if(user!=null)
+          {
+      
+      out.write("\n");
+      out.write("       \n");
+      out.write("      <li class=\"nav-item\">    <!--when user login-->\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"index.jsp\"> ");
+      out.print(user.getEmail());
+      out.write(" <i class=\"fa-solid fa-user\"></i> </a>  <!--.getName()-->\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("       \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"index.jsp\"> Home <i class=\"fa-solid fa-house\"></i></a>\n");
+      out.write("      </li>\n");
+      out.write("\n");
+      out.write("     \n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">    <!--when user login-->\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"profile.jsp\"> Profile <i class=\"fa-solid fa-user\"></i> </a>  <!--.getName()-->\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"myCart.jsp\"> My Cart <i class=\"fa-solid fa-cart-arrow-down\"></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"myOrder.jsp\"> My Order  <i class='fab fa-elementor'></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"messageUs.jsp\"> Message Us <i class='fas fa-comment-alt'></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"about.jsp\"> About Us <i class=\"fa fa-address-book\"></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("            <a class=\"nav-link pl-2\" href=\"LogoutServlet\"> Logout <span class=\"fa fa-share-square\"></span></a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      ");
+}
+      out.write("\n");
+      out.write("      \n");
+      out.write("      ");
+
+          if(user==null)
+          {
+       
+      out.write("\n");
+      out.write("              <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"index.jsp\"> Home <i class=\"fa-solid fa-house\"></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"login.jsp\"> Message Us <i class='fas fa-comment-alt'></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"login.jsp\"> About Us <i class=\"fa fa-address-book\"></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"login.jsp\"> Login <i class=\"fa fa-user-circle fa-spin \"></i></a>\n");
+      out.write("      </li>\n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link pl-2\" href=\"register.jsp\"> Sign Up <i class=\"fa fa-user-plus\"></i> </a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      ");
+
+          }
+        
+      out.write("\n");
+      out.write("      \n");
+      out.write("\n");
+      out.write("<!--    <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle pl-2\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("            <i class=\"fa-light fa-list-dropdown\"></i> Categories\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">Programming language</a>\n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">Project Implementation</a>\n");
+      out.write("          \n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">Data Structure</a>\n");
+      out.write("        </div>\n");
+      out.write("      </li>  -->\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("<!--       <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("            <i class=\"fa-light fa-list-dropdown pl-2\"></i> Setting\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("            <a class=\"dropdown-item\" href=\"#\"><i class=\"fa-solid fa-address-card\"></i>&nbsp; About Us</a>\n");
+      out.write("            <a class=\"dropdown-item\" href=\"#\"><i class=\"fa-solid fa-phone\"></i> &nbsp; Contact Us</a>\n");
+      out.write("        </div>\n");
+      out.write("      </li>  -->\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("  \n");
+      out.write("    </ul>\n");
+      out.write("      \n");
+      out.write("       <form action=\"searchHome.jsp\" method=\"post\" class=\"form-inline my-2 my-lg-0 pl-2 \">\n");
+      out.write("          \n");
+      out.write("           <input name=\"search\" class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\n");
+      out.write("<!--      <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Search</button>-->\n");
+      out.write("<button type=\"submit\" class=\"btn btn-outline-light my-2 my-sm-0\"> <i class=\"fa fa-search\"></i> </button>\n");
+      out.write("    \n");
+      out.write("      </form>\n");
+      out.write("      \n");
+      out.write("      </div>\n");
+      out.write("</nav>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("<!-- <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n");
+      out.write("  <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n");
+      out.write("  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
+      out.write("    <span class=\"navbar-toggler-icon\"></span>\n");
+      out.write("  </button>\n");
+      out.write("\n");
+      out.write("  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n");
+      out.write("    <ul class=\"navbar-nav mr-auto\">\n");
+      out.write("      <li class=\"nav-item active\">\n");
+      out.write("        <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n");
+      out.write("      </li>\n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link active\" href=\"#\">new Product</a>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item dropdown\">\n");
+      out.write("        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n");
+      out.write("          Category\n");
+      out.write("        </a>\n");
+      out.write("        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">Shoes</a>\n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">Clothes</a>\n");
+      out.write("          \n");
+      out.write("          <a class=\"dropdown-item\" href=\"#\">Books</a>\n");
+      out.write("        </div>\n");
+      out.write("      </li>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      <li class=\"nav-item\">\n");
+      out.write("        <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n");
+      out.write("      </li>\n");
+      out.write("    </ul>\n");
+      out.write("    <form class=\"form-inline my-2 my-lg-0\">\n");
+      out.write("      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n");
+      out.write("      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n");
+      out.write("    </form>\n");
+      out.write("  </div>\n");
+      out.write("</nav>-->\n");
+      out.write("       \n");
+      out.write("       \n");
+      out.write("    \n");
+      out.write("       \n");
+      out.write("  ");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    <div class=\"row\">\r\n");
+      out.write("        <div class=\"pic_base\">\r\n");
+      out.write("            <img src=\"img/pen-table-note.jpg\" width=200 id=\"profile_pic\" alt=\"\">\r\n");
+      out.write("            <!-- <div class=\"icon_base\">\r\n");
+      out.write("                <a href=\"#\">\r\n");
+      out.write("                    <i class=\"fa fa-pencil fa-2x\" id=\"edit\"></i>\r\n");
+      out.write("                </a>\r\n");
+      out.write("            </div> -->\r\n");
+      out.write("        </div>\r\n");
+      out.write("        <div class=\"content_base\">\r\n");
+      out.write("            <h1 id=\"title\">Hello Everyone !!</h1>\r\n");
+      out.write("            <h2 id=\"profession\">I am Ujjwal Founder of the site</h2>\r\n");
+      out.write("            <p id=\"content\" style=\"font-size: 20px;\">\r\n");
+      out.write("            \r\n");
+      out.write("                I am student of IIITU from 2nd year ( ECE Branch) . \r\n");
+      out.write("                You can contact also contact by using the message option that is available in site . For further query you can send the mail on below E-mail .\r\n");
+      out.write("            \r\n");
+      out.write("                <br><br>\r\n");
+      out.write("                <strong>E-mail :</strong> 20248@iiitu.ac.in\r\n");
+      out.write("                <br><br>\r\n");
+      out.write("                \r\n");
+      out.write("                <div style=\"text-align: center; font-size: 30px;\">\r\n");
+      out.write("                <strong >Thank You </strong>\r\n");
+      out.write("            </div>\r\n");
+      out.write("                <!-- <strong>Born:</strong> 4 April 1965 (age 51 years), Manhattan, New York City, New York, United States\r\n");
+      out.write("                <br><br>\r\n");
+      out.write("                <strong>Upcoming movies:</strong> Spider-Man: Homecoming, Avengers: Infinity War, Untitled Avengers film -->\r\n");
+      out.write("            </p>\r\n");
+      out.write("\r\n");
+      out.write("        <br>\r\n");
+      out.write("        <ul class=\"social\">\r\n");
+      out.write("            <li> <a href=\"#\"><i class=\"fa fa-2x fa-twitter\"></i></a> </li>\r\n");
+      out.write("            <li> <a href=\"#\"><i class=\"fa fa-2x fa-facebook\"> </i></a></li>\r\n");
+      out.write("            <li> <a href=\"#\"><i class=\"fa fa-2x fa-instagram\"> </i></a></li>\r\n");
+      out.write("        </ul>\r\n");
+      out.write("        </div>\r\n");
+      out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("</body>\r\n");
+      out.write("</html>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
